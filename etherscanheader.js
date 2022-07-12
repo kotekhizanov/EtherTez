@@ -49,7 +49,9 @@ function makeItTez()
         linksBlock.appendChild(osHref);
         osHref.appendChild(osImg);
         
-        console.log("edited");
+        
+	let ethPrice = document.getElementById("ethPrice");
+	ethPrice.childNodes.item(1).innerHTML = ethPrice.childNodes.item(1).innerHTML + '| <a href="/nfttracker#mint" target="_blank" class="text-secondary"><span class="gasPricePlaceHolder">Mint tracker</span></a>';	
 }
 
 makeItTez();

@@ -11,7 +11,6 @@ function makeItTez()
             var url = trNode.childNodes.item(5).lastChild.innerHTML.split('"')[5].split("/")[1];
             trNode.childNodes.item(4).innerHTML = '';//'<a target="_blank" href="https://icy.tools/collections/' + url + '/overview">icy.tools</a>';
 			
-			console.log(trNode.childNodes.item(4).lastChild);
 			let gemHref = document.createElement("a");
 				gemHref.target = "_blank";
 				gemHref.href = "https://icy.tools/collections/" + url + "/overview";
