@@ -1,5 +1,8 @@
+let changingInProcess = false;
+
 function makeItTez()
 {
+    changingInProcess = true;
     let list = document.getElementById("mytable_mint").childNodes.item(3).childNodes;
     list.forEach(function(trNode, trNodeIndex, listObj) {
 
@@ -9,6 +12,13 @@ function makeItTez()
             trNode.childNodes.item(4).lastChild.innerHTML = '<a target="_blank" href="https://icy.tools/collections/' + contractId + '/overview">icy.tools</a>';
         }
     });
+    changingInProcess = false;
 }
 
-const myInterval = setTimeout(makeItTez, 1000);
+const elementToObserve = document.querySelector("#mytable_mint");
+const observer = new MutationObserver(function() {
+    if (!changingInProcess){
+            makeItTez();
+    }
+});
+observer.observe(elementToObserve, { childList: true});

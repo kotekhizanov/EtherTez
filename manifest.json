@@ -9,6 +9,10 @@
         "js": ["app.js" ]
     },
     {
+        "matches": [ "https://etherscan.io/address*", "https://etherscan.io/token*" ],
+        "js": ["etherscanheader.js" ]
+    },
+    {
         "matches": [ "https://opensea.io/account*" ],
         "js": ["opensea.js" ]
     }
