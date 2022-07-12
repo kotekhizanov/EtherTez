@@ -8,8 +8,46 @@ function makeItTez()
 
         if (trNode.nodeType != Node.TEXT_NODE)
         {
-            var contractId = trNode.childNodes.item(5).lastChild.innerHTML.split('"')[5].split("/")[1];
-            trNode.childNodes.item(4).lastChild.innerHTML = '<a target="_blank" href="https://icy.tools/collections/' + contractId + '/overview">icy.tools</a>';
+            var url = trNode.childNodes.item(5).lastChild.innerHTML.split('"')[5].split("/")[1];
+            trNode.childNodes.item(4).innerHTML = '';//'<a target="_blank" href="https://icy.tools/collections/' + url + '/overview">icy.tools</a>';
+			
+			console.log(trNode.childNodes.item(4).lastChild);
+			let gemHref = document.createElement("a");
+				gemHref.target = "_blank";
+				gemHref.href = "https://icy.tools/collections/" + url + "/overview";
+				
+			let gemImg = document.createElement("img");
+				gemImg.src = "https://buynft.com/wp-content/uploads/sites/2/2022/05/icy_tools_logo.png";
+				gemImg.height = "25";
+				gemImg.style.marginLeft = "15px";
+
+			let icyHref = document.createElement("a");
+				icyHref.target = "_blank";
+				icyHref.href = "https://www.gem.xyz/collection/" + url + "/";
+				
+			let icyImg = document.createElement("img");
+				icyImg.src = "https://www.gem.xyz/assets/gem.png";
+				icyImg.height = "25";
+				icyImg.style.marginLeft = "15px";
+
+			let osHref = document.createElement("a");
+				osHref.target = "_blank";
+				osHref.href = "https://opensea.io/assets/ethereum/" + url + "/1";
+				
+			let osImg = document.createElement("img");
+				osImg.src = "https://opensea.io/static/images/logos/opensea.svg";
+				osImg.height = "25";
+				osImg.style.marginLeft = "15px";
+
+				
+				trNode.childNodes.item(4).appendChild(gemHref);
+				gemHref.appendChild(gemImg);
+				
+				trNode.childNodes.item(4).appendChild(icyHref);
+				icyHref.appendChild(icyImg);
+				
+				trNode.childNodes.item(4).appendChild(osHref);
+				osHref.appendChild(osImg);
         }
     });
     changingInProcess = false;
