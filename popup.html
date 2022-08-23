@@ -25,19 +25,10 @@
 
             body{
                 width:420px;
-                height:500px;
+                height:400px;
             }
         </style>
-        <script>
-            const walletOnClick = (e) => {
-                icon.src = "check-icon.svg";
-                navigator.clipboard.writeText("0x4A4c4016AA02e5795B75de931b292a8F9dDaf7d9");
-                setInterval(()=>{
-                    icon.src = "copy-icon.svg";
-                }, 3000);
-            }
-        </script>
-
+        <script src="popup.js"></script>
     </head>
 	<body>
 		<div class="main">
@@ -13189,7 +13180,7 @@
 					</tr>
 				</tbody>
 			</table>
-            <div class="wallet" onclick="walletOnClick()">0x4A4c4016AA02e5795B75de931b292a8F9dDaf7d9 <img id="icon" width="12" src="copy-icon.svg"></div>
+            <div class="wallet" id="wallet" onclick="walletOnClick()">0x4A4c4016AA02e5795B75de931b292a8F9dDaf7d9 <img id="icon" height="12" src="copy-icon.svg"></div>
 		</div>
 	</body>
 </html>
