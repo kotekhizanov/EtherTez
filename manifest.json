@@ -1,23 +1,24 @@
 {
-   "manifest_version": 3,
-   "name": "Ether Tez 2.0",
-   "description": "Ether helper Tez!",
-   "version": "2.1",
-   "content_scripts": [
+  "manifest_version": 3,
+  "name": "EtherTez",
+  "description": "EtherTez adds useful links to NFT sites.",
+  "version": "1.0.1",
+  "content_scripts": [
     {
-        "matches": [ "https://etherscan.io/nfttracker*" ],
-        "js": ["app.js" ]
+      "matches": ["https://etherscan.io/nfttracker*"],
+      "js": ["etherscan_nfttracker.js"]
     },
     {
-        "matches": [ "https://etherscan.io/address*", "https://etherscan.io/token*" ],
-        "js": ["etherscanheader.js" ]
+      "matches": [
+        "https://etherscan.io/address*",
+        "https://etherscan.io/token*"
+      ],
+      "js": ["etherscan_header.js"]
     },
     {
-        "matches": [ "https://opensea.io/account*" ],
-        "js": ["opensea.js" ]
+      "matches": ["https://opensea.io/account*"],
+      "js": ["opensea.js"]
     }
-   ],
-    "permissions": [
-        "storage"
-    ]
+  ],
+  "permissions": ["storage"]
 }

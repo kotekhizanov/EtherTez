@@ -37,8 +37,6 @@ function makeItTez()
         osImg.height = "25";
         osImg.style.marginLeft = "15px";
 
-        console.log(window.location.href);
-
         document.getElementById("navBar").childNodes.item(1).appendChild(linksBlock);
         linksBlock.appendChild(gemHref);
         gemHref.appendChild(gemImg);

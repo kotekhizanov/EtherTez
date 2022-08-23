@@ -3,13 +3,16 @@ let changingInProcess = false;
 function makeItTez()
 {
     changingInProcess = true;
+
+	let th = document.getElementById("mytable_mint_wrapper").childNodes.item(2).childNodes.item(0).childNodes.item(0).childNodes.item(0).childNodes.item(0).childNodes.item(1).childNodes.item(4).innerHTML = "Links";
+	
     let list = document.getElementById("mytable_mint").childNodes.item(3).childNodes;
     list.forEach(function(trNode, trNodeIndex, listObj) {
 
         if (trNode.nodeType != Node.TEXT_NODE)
         {
-            var url = trNode.childNodes.item(5).lastChild.innerHTML.split('"')[5].split("/")[1];
-            trNode.childNodes.item(4).innerHTML = '';//'<a target="_blank" href="https://icy.tools/collections/' + url + '/overview">icy.tools</a>';
+            let url = trNode.childNodes.item(5).lastChild.innerHTML.split('"')[5].split("/")[1];
+            trNode.childNodes.item(4).innerHTML = '';
 			
 			let gemHref = document.createElement("a");
 				gemHref.target = "_blank";
@@ -31,7 +34,7 @@ function makeItTez()
 
 			let osHref = document.createElement("a");
 				osHref.target = "_blank";
-				osHref.href = "https://opensea.io/assets/ethereum/" + url + "/1";
+				osHref.href = "https://opensea.io/assets/ethereum/" + url + "/";
 				
 			let osImg = document.createElement("img");
 				osImg.src = "https://opensea.io/static/images/logos/opensea.svg";
