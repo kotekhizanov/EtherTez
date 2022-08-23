@@ -4,13 +4,12 @@ function makeItTez()
 {
     changingInProcess = true;
 
-	let th = document.getElementById("mytable_mint_wrapper").childNodes.item(2).childNodes.item(0).childNodes.item(0).childNodes.item(0).childNodes.item(0).childNodes.item(1).childNodes.item(4).innerHTML = "Links";
-	
-    let list = document.getElementById("mytable_mint").childNodes.item(3).childNodes;
+	let list = document.getElementById("mytable_mint").childNodes.item(3).childNodes;
     list.forEach(function(trNode, trNodeIndex, listObj) {
 
         if (trNode.nodeType != Node.TEXT_NODE)
         {
+			let id = trNode.childNodes.item(6).lastChild.lastChild.innerHTML;
             let url = trNode.childNodes.item(5).lastChild.innerHTML.split('"')[5].split("/")[1];
             trNode.childNodes.item(4).innerHTML = '';
 			
@@ -34,7 +33,7 @@ function makeItTez()
 
 			let osHref = document.createElement("a");
 				osHref.target = "_blank";
-				osHref.href = "https://opensea.io/assets/ethereum/" + url + "/";
+				osHref.href = "https://opensea.io/assets/ethereum/" + url + "/" + id;
 				
 			let osImg = document.createElement("img");
 				osImg.src = "https://opensea.io/static/images/logos/opensea.svg";
