@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "EtherTez",
 	"description": "A little helper for NFT speculation. Slightly modifies etherscan.io",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"content_scripts": [
 		{
 			"matches": ["https://etherscan.io/nfttracker*"],
