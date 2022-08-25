@@ -1,0 +1,25 @@
+* {
+    font-family: Euclid, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wallet{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.wallet:hover{
+    background-color: #eee;
+    border-radius: 8px;
+}
+
+body{
+    width:420px;
+    height:320px;
+}

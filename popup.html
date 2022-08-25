@@ -1,33 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            * {
-                font-family: Euclid, Roboto, Helvetica, Arial, sans-serif;
-            }
-
-            .main{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .wallet{
-                cursor: pointer;
-                padding: 5px;
-            }
-
-            .wallet:hover{
-                background-color: #eee;
-                border-radius: 8px;
-            }
-
-            body{
-                width:420px;
-                height:320px;
-            }
-        </style>
+        <link rel="stylesheet" href="popup.css" />
         <script src="popup.js"></script>
     </head>
 	<body>
@@ -13180,7 +13154,7 @@
 					</tr>
 				</tbody>
 			</table>
-            <div class="wallet" id="wallet" onclick="walletOnClick()">0x4A4c4016AA02e5795B75de931b292a8F9dDaf7d9 <img id="icon" height="12" src="copy-icon.svg"></div>
+            <div class="wallet" id="wallet">0x4A4c4016AA02e5795B75de931b292a8F9dDaf7d9 <img id="icon" height="12" src="copy-icon.svg"></div>
 		</div>
 	</body>
 </html>
